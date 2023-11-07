@@ -10,3 +10,28 @@ body {
   line-height: 1.5;
   padding: 4em 1em;
 }
+
+a {
+  color: blue;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h1:before { content: "# "; }
+h2:before { content: "## "; }
+h3:before { content: "### "; }
+
+code, pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
