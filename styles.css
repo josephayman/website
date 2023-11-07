@@ -32,6 +32,9 @@ h1:before { content: "# "; color:blue;}
 h2:before { content: "## "; color:blue;}
 h3:before { content: "### "; color:blue;}
 
+
+#quoteDisplay{ color: gray; font-style: italic; font-size: 0.8em; }
+
 code, pre {
   background: #eee;
 }
