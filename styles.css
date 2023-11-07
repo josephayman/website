@@ -11,20 +11,26 @@ body {
   padding: 4em 1em;
 }
 
-a { color: blue; }
+a {
+  color: blue;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to left, blue 50%, transparent 50%);
+  transition: background-position 0.2s ease;
+  display: inline-block;
+}
 
 a:hover {
   color: white;
-  background: blue;
+  background-position: -100% 0;
 }
 
 h1, h2, h3 {
   text-transform: uppercase;
 }
 
-h1:before { content: "# "; }
-h2:before { content: "## "; }
-h3:before { content: "### "; }
+h1:before { content: "# "; color:blue;}
+h2:before { content: "## "; color:blue;}
+h3:before { content: "### "; color:blue;}
 
 code, pre {
   background: #eee;
@@ -37,4 +43,10 @@ code {
 
 pre {
   padding: 1em;
+}
+
+footer {
+  margin-top: 2em;
+  text-align: center;
+  font-weight: bold;
 }
