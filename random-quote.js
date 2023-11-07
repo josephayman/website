@@ -40,4 +40,8 @@ function displayRandomQuote() {
     document.getElementById("quoteDisplay").innerHTML = randomQuote;
 }
 
+// Add an event listener to the quote display element
+document.getElementById('quoteDisplay').addEventListener('click', displayRandomQuote);
+
+
 window.onload = displayRandomQuote;
