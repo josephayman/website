@@ -11,8 +11,11 @@ body {
   padding: 4em 1em;
 }
 
-a {
-  color: blue;
+a { color: blue; }
+
+a:hover {
+  color: white;
+  background: blue;
 }
 
 h1, h2, h3 {
