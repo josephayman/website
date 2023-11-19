@@ -1,73 +1,22 @@
-/* Additional styles for the timeline */
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  background-color: blue;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+.margin-left {
+    margin-left: 20px;
 }
 
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
+.line-vertical {
+    width: 10px;
+    height: 200px;
+    background: blue;
 }
 
-.container::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid blue;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-  transition: border-width 0.2s ease-in-out;
+.line-horizontal {
+    width: 100%;
+    height: 10px;
+    background: blue;
 }
-
-.container:hover::after {
-  border-width: 8px;
-}
-
-/* Hide timeline line and circles on smaller screens */
-@media screen and (max-width: 600px) {
-    .timeline::after,
-    .container::after {
-        display: none;
-    }
-    .container {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-/* Fade-in animation for timeline content */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.container {
-    opacity: 0; /* Start elements as invisible */
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /* Keep the element visible after animation */
-    animation: fadeIn ease 1s forwards;
-    animation-delay: calc(var(--animation-order) * 0.3s); /* Set by javascript file for each item */
-}
-
-/* Fade-in animation for the timeline line and circles */
-.timeline::after { animation: fadeIn 0.5s ease forwards 0.5s; }
-.container::after { animation: fadeIn 0.5s ease forwards 0.5s; }
