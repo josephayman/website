@@ -24,18 +24,33 @@ a:hover {
   background-position: -100% 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 
-h1:before { content: "# "; color:blue;}
-h2:before { content: "## "; color:blue;}
-h3:before { content: "### "; color:blue;}
+h1:before {
+  content: "# ";
+  color: blue;
+}
+h2:before {
+  content: "## ";
+  color: blue;
+}
+h3:before {
+  content: "### ";
+  color: blue;
+}
 
+#quoteDisplay {
+  color: gray;
+  font-style: italic;
+  font-size: 0.8em;
+}
 
-#quoteDisplay{ color: gray; font-style: italic; font-size: 0.8em; }
-
-code, pre {
+code,
+pre {
   background: #eee;
 }
 
@@ -48,8 +63,43 @@ pre {
   padding: 1em;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 footer {
   margin-top: 2em;
   text-align: center;
   font-weight: lighter;
+}
+
+.logo-dev {
+  font-size: x-large;
+  font-weight: lighter;
+}
+
+.logo-slash {
+  font-size: x-large;
+  font-weight: bolder;
+  color: blue;
+}
+
+.logo-am {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.normal-link {
+  color: inherit;
+  background-size: initial;
+  background-image: none;
+  transition: none;
+  text-decoration: none;
+}
+
+.normal-link:hover {
+  color: inherit;
+  background-position: initial;
 }
